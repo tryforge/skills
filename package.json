@@ -1,0 +1,28 @@
+{
+  "name": "@botforge/skills",
+  "version": "0.1.0",
+  "description": "Agent Skills for building Discord bots with ForgeScript, BotForge extensions, and the BotForge MCP.",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tryforge/skills.git"
+  },
+  "homepage": "https://docs.botforge.org",
+  "keywords": [
+    "botforge",
+    "forgescript",
+    "discord",
+    "agent-skills",
+    "mcp",
+    "ai"
+  ],
+  "files": [
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "validate": "node scripts/validate-skills.mjs"
+  }
+}
