@@ -1,4 +1,4 @@
-# @botforge/skills
+# @tryforge/skills
 
 Agent Skills for building Discord bots with **ForgeScript**, **BotForge extensions**, and the **BotForge MCP**, following the open [Agent Skills specification](https://agentskills.io).
 

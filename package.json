@@ -1,5 +1,5 @@
 {
-  "name": "@botforge/skills",
+  "name": "@tryforge/skills",
   "version": "0.1.0",
   "description": "Agent Skills for building Discord bots with ForgeScript, BotForge extensions, and the BotForge MCP.",
   "private": false,
