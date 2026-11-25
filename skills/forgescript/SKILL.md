@@ -13,7 +13,7 @@ Use this skill when building or modifying Discord bots powered by `@tryforge/for
 
 ## Core Workflow
 
-1. **Never guess `$function` names or parameter order.** Look them up using the BotForge MCP (`search` or `extensions` with `name: "forgescript"`) or on `https://docs.botforge.org`.
+1. **Verify every `$function`'s `args` metadata and behavior.** Never guess `$function` names, parameter order, enum values, or callback semantics from memory. Look up full `args` metadata (not just signatures) using the BotForge MCP (`extensions` with `item_name` or `search`), and read the implementation via `forgescript` (`read`) whenever an argument's runtime behavior is ambiguous.
 2. **Validate every ForgeScript snippet** with the BotForge MCP `validate` tool (`strict: true`) and format with `format` before presenting it.
 3. **Check required intents and events.** Prefix commands need `events: ['messageCreate']` and `intents: ['Guilds', 'GuildMessages', 'MessageContent']`. Slash commands and components need `events: ['interactionCreate']` (or `applicationCommands.load(...)`) and do not require `MessageContent`.
 4. **Match existing project conventions.** Follow the project's existing style for command exports (`module.exports`, `export default`, or `.fs` files) and slash command `data` (plain JSON object vs `discord.js` `SlashCommandBuilder`).

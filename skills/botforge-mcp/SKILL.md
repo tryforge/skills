@@ -11,6 +11,12 @@ metadata:
 
 When the `botforge` MCP server is connected, prefer its tools over guessing any ForgeScript function, extension signature, or Discord constant.
 
+## Verification Rule (No Guessing)
+
+Before writing any non-trivial ForgeScript snippet:
+1. **Verify every `$function`'s full `args` metadata** (not just its `$fn[...]` signature) via `search` or `extensions` (`item_name`), including parameter descriptions, types, and `enum` values.
+2. **Inspect the implementation when ambiguous:** If an argument's runtime behavior is not completely clear from its description (for example, callback/code arguments, return requirements, or side effects), read the compiled JS/source via `forgescript` (`read`) before using it.
+
 ## Tool Selection Guide
 
 | Task | Tool | Notes |
