@@ -28,7 +28,7 @@ ForgeScript supports three prefix operators right after `$` (in the order `$!#@[
 
 ## Escaping Special Characters
 
-Because `[`, `]`, `;`, and `\` are syntax delimiters, escape them with `\` when you need them as literal text inside an argument:
+Because `[`, `]`, `;`, `\`, and `$` are syntax characters, escape them with `\` when you need them as literal text (escaping `$` as `\$fn[...]` prevents the function from executing):
 
 ```fs
 $description[Use \; to include a literal semicolon and \[brackets\] safely.]

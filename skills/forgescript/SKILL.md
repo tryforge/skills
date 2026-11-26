@@ -48,7 +48,7 @@ client.login(process.env.DISCORD_TOKEN)
   - `$#fn[...]` (**Silent**): Suppresses the Discord error alert (`ctx.alert()`) and exits execution cleanly on failure (does not suppress console/Logger errors).
   - `$@[delimiter]fn[...]` (**Count**): Splits a string return value by `delimiter` and returns the number of parts (`0` if empty).
   - Combined order: `$!#@[delimiter]fn[...]`.
-- **Syntax & escaping:** Arguments are `;`-separated inside `[...]`. Escape literal `[`, `]`, `;`, or `\` with `\`.
+- **Syntax & escaping:** Arguments are `;`-separated inside `[...]`. Escape literal `[`, `]`, `;`, `\`, or `$` (to prevent function execution, e.g. `\$fn[...]`) with `\`.
 - **Always-execute & dynamic prefixes:** Omitting `name` on a `messageCreate` command runs it on every message; `prefixes` entries are compiled as ForgeScript (so dynamic prefixes like `'$getGuildVar[prefix;!]'` work).
 - **Variables & control flow:** Use `$let[key;value]` / `$get[key]`, `$onlyIf[condition;error]`, and `$if[condition;ifTrue;ifFalse]`.
 
