@@ -32,13 +32,13 @@ For interactive buttons (non-Link styles like `Primary`, `Secondary`, `Success`,
 
 ```fs
 $addActionRow
-$addStringSelectMenu[role_picker;Pick a role;1;1;false]
+$addStringSelectMenu[role_picker;Pick a role;false;1;1]
 $addOption[Announcements;Get release alerts;announcements]
 $addOption[Events;Get community event pings;events]
 ```
 
 ## Modals
 
-Trigger a modal from a slash command or button interaction with `$modal[customID;title]`, `$addTextInput[customID;label;style;required?;placeholder?;value?;minLength?;maxLength?]`, and `$showModal`, then handle submission in an `interactionCreate` command with `allowedInteractionTypes: ['modal']`.
+Trigger a modal from a slash command or button interaction with `$modal[customID;title]`, `$addTextInput[customID;name;type;required?;placeholder?;defaultValue?;minLength?;maxLength?]` (`type` is `Short` or `Paragraph`), and `$showModal`, then handle submission in an `interactionCreate` command with `allowedInteractionTypes: ['modal']`.
 
 Always verify exact parameter order with the BotForge MCP `search` or `extensions` tool before using unfamiliar UI functions.
