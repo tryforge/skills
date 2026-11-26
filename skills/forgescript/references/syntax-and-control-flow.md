@@ -23,7 +23,7 @@ ForgeScript supports three prefix operators right after `$` (in the order `$!#@[
 | Operator | Syntax | Behavior |
 | :--- | :--- | :--- |
 | **Negation** | `$!fn[...]` | Executes the function normally but suppresses its return value from the output. Useful for functions like `$!clearMessages[$channelID;10]` or `$!sendMessage[...]` when you do not want the returned ID/count printed. |
-| **Silent** | `$#fn[...]` | Silences errors thrown by the function and exits execution cleanly instead of logging/failing. |
+| **Silent** | `$#fn[...]` | Suppresses the Discord error alert (`ctx.alert()`) and exits cleanly on failure (console/Logger errors still log). |
 | **Count** | `$@[delimiter]fn[...]` | Splits a string return value by `delimiter` and returns the number of parts (`0` if empty). |
 
 ## Escaping Special Characters

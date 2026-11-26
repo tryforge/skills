@@ -45,7 +45,7 @@ client.login(process.env.DISCORD_TOKEN)
 - **0-based indexing:** Indexes start at `0`, not `1` (`$message[0]`, `$mentioned[0;true]`, `$arrayAt[arr;0]`, `$splitText[0]`).
 - **Function operators (modifiers):**
   - `$!fn[...]` (**Negation**): Runs the function for side effects and suppresses its return value.
-  - `$#fn[...]` (**Silent**): Silences errors and exits execution cleanly on failure.
+  - `$#fn[...]` (**Silent**): Suppresses the Discord error alert (`ctx.alert()`) and exits execution cleanly on failure (does not suppress console/Logger errors).
   - `$@[delimiter]fn[...]` (**Count**): Splits a string return value by `delimiter` and returns the number of parts (`0` if empty).
   - Combined order: `$!#@[count]fn[...]`.
 - **Syntax & escaping:** Arguments are `;`-separated inside `[...]`. Escape literal `[`, `]`, `;`, or `\` with `\`.
