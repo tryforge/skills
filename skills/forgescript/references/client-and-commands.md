@@ -45,7 +45,9 @@ module.exports = {
 
 A single `.js` file can also export an array of commands (`module.exports = [cmd1, cmd2]`).
 
-### 2. `.fs` Files (Native ForgeScript Format)
+### 2. `.fs` Files (Native ForgeScript Format — Deprecated)
+
+> **Warning:** `.fs` files are deprecated. Prefer standard `.js` / `.ts` command files (`module.exports` or `export default`) unless maintaining an existing `.fs` codebase.
 
 `.fs` files use `[property]` blocks without JavaScript boilerplate:
 
