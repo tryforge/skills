@@ -46,7 +46,7 @@ client.login(process.env.DISCORD_TOKEN)
 - **Function operators (modifiers):**
   - `$!fn[...]` (**Negation**): Runs the function for side effects and suppresses its return value.
   - `$#fn[...]` (**Silent**): Silences errors and exits execution cleanly on failure.
-  - `$@[count]fn[...]` (**Count**): Applies a count modifier to the function.
+  - `$@[delimiter]fn[...]` (**Count**): Splits a string return value by `delimiter` and returns the number of parts (`0` if empty).
   - Combined order: `$!#@[count]fn[...]`.
 - **Syntax & escaping:** Arguments are `;`-separated inside `[...]`. Escape literal `[`, `]`, `;`, or `\` with `\`.
 - **Always-execute & dynamic prefixes:** Omitting `name` on a `messageCreate` command runs it on every message; `prefixes` entries are compiled as ForgeScript (so dynamic prefixes like `'$getGuildVar[prefix;!]'` work).
