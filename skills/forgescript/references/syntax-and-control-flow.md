@@ -60,5 +60,6 @@ $sendMessage[$channelID;Cleared 10 messages.]
 Supported comparison operators inside condition fields: `==`, `!=`, `<=`, `>=`, `<`, `>`.
 
 ```fs
-$if[$isBot[$authorID]==true;$return;$if[$guildID==;$sendMessage[$channelID;This command only works in a server.];$sendMessage[$channelID;Hello from $guildName!]]]
+$onlyIf[$isBot[$authorID]==false;]
+$if[$guildID==;$sendMessage[$channelID;This command only works in a server.];$sendMessage[$channelID;Hello from $guildName!]]
 ```
